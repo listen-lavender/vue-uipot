@@ -1,6 +1,6 @@
 <template>
     <div>
-        <choose v-for="(item, index) in cascade" :curr="index" :next="index+1" :hint="item" @on-select="onSelect">
+        <choose v-for="(item, index) in cascade" :curr="index" :next="index+1" :hint="item" @change="change">
         </choose>
     </div>
 </template>
@@ -18,7 +18,7 @@
         data () {
             return {
                 cascade: null,
-                model: {}
+                choice: {}
             }
         },
         created(){
@@ -32,25 +32,29 @@
                     })
                 }
             },
-            onSelect:function(next, key, val) {
-                // this.$emit('on-modify', key, val);
-                this.model[key] = val;
-                console.log(this.model);
+            change:function(next, key, val) {
+                this.choice[key] = val;
+                var obj = {};
+                this.clone(this.choice, obj);
+                this.$emit('input', obj);
+
+                this.$emit('change', key, val);
+
                 if(this.cascade[next] === undefined){
                     ;
                 }else{
                     this.cascade[next].param=val;
                     // var obj = {};
-                    // this.shallowCopy(this.cascade[next], obj);
+                    // this.clone(this.cascade[next], obj);
                     // Vue.set(this.cascade, next, obj);
                 }
             },
-            // shallowCopy:function(src, obj) {
-            //     for(let key in src)
-            //         if(!(key in obj))
-            //             obj[key] = src[key];
-            //     return obj;
-            // }
+            clone:function(src, obj) {
+                for(let key in src)
+                    if(!(key in obj))
+                        obj[key] = src[key];
+                return obj;
+            }
         },
         components: {
             choose: Choose

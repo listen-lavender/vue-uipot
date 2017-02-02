@@ -41,7 +41,7 @@
             },
             'choice':function(newVal, oldVal) {
                 if(newVal != oldVal){
-                    this.$emit("on-select", this.next, this.hint.name, this.choice);
+                    this.$emit("change", this.next, this.hint.name, this.choice);
                 }
             },
         },
