@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Cascade from './components/Cascade'
+import Cascade from 'src/index'
 export default {
   name: 'app',
   data () {
