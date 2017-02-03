@@ -1,6 +1,7 @@
 {
   "name": "vue-cascade",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "main": "dist/vue-cascade.common.js",
   "description": "A Vue component of cascading select",
   "author": "haokuan <jingdaohao@gmail.com>",
   "private": false,

@@ -1,6 +1,6 @@
 {
   "name": "loading",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue.js project",
   "author": "haokuan <jingdaohao@gmail.com>",
   "private": true,
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "vue": "^2.1.0",
-    "vue-cascade": "^1.0.1"
+    "vue-cascade": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
