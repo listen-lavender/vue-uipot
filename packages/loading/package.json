@@ -1,9 +1,9 @@
 {
-  "name": "vue-cascade",
+  "name": "loading",
   "version": "1.0.1",
-  "description": "A Vue component of cascading select",
+  "description": "A Vue.js project",
   "author": "haokuan <jingdaohao@gmail.com>",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "vue": "^2.1.0",
-    "vue-resource": "^0.7.0",
-    "mockjs": "^1.0.1-beta3"
+    "vue-cascade": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
