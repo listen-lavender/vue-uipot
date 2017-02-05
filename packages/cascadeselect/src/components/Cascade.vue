@@ -6,13 +6,13 @@
 </template>
 <script>
     import Choose from './Choose'
-    import Vue from 'vue'
-    import VueResource from 'vue-resource'
-    Vue.use(VueResource)
     export default {
         props: {
             config: {
-                type: Object
+                type: Object,
+                default: {
+                    url:null
+                }
             }
         },
         data () {

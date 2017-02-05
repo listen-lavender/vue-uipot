@@ -1,2 +1,3 @@
-import Cascade from './components/Cascade'
+import Cascade from './components/Cascade';
+
 export default Cascade
